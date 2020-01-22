@@ -1,0 +1,25 @@
+{
+  "name": "training2020",
+  "version": "1.0.0",
+  "description": "Automation Training",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dattademo/training2020.git"
+  },
+  "author": "Damian Attademo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dattademo/training2020/issues"
+  },
+  "homepage": "https://github.com/dattademo/training2020#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "jasmine-data-provider": "^2.2.0",
+    "jasmine-reporters": "^2.3.2",
+    "protractor-html-reporter": "^1.3.2"
+  }
+}
