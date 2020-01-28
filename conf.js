@@ -15,7 +15,7 @@ exports.config = {
         browser.ignoreSynchronization = true;
         // maximize browser
         browser.driver.manage().window().maximize();
-        browser.get('https://www.despegar.com.ar');  
+       browser.get('https://www.despegar.com.ar');  
         //Jasmine set initialization
         const environment = jasmine.getEnv();
 
