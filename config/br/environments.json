@@ -1,0 +1,14 @@
+{
+	"prod": {
+		"URL": "https://www.decolar.com",
+		"timeout" : 20000
+	},
+	"uat": {
+		"URL": "https://uat.decolar.com",
+		"timeout" : 40000
+	},
+	"test": {
+		"URL": "https://test.decolar.com",
+		"timeout" : 30000
+	}
+}

@@ -9,19 +9,40 @@ exports.config = {
     // run all the specs under Spec folder
     specs: ['./specs/homePage/homePage.spec.js'],
 
+    // run specific spec files in order to set different strategies
+    suites: {
+        homePageTest: './specs/homePage/homePage.spec.js',
+        homePageTestNoObject: './specs/homePage/homePageNoObject.spec.js',
+        functional: './specs/*/*.spec.js',
+        smokeTest: ['./specs/homePage/homePage.spec.js', './specs/homePage/homePageNoObject.spec.js']
+    },
+
+    // env parameter will get the desired env URL from config-> environments.js
+    //prod URL is set by default
+    // test data Language will be spanish for default
+    params: {
+        env: "prod",
+        country: "ar"
+    },
+
     onPrepare: () => {
         // Browser config
         // Ignore Sync for non Angunlar pages
         browser.ignoreSynchronization = true;
         // maximize browser
         browser.driver.manage().window().maximize();
-       browser.get('https://www.despegar.com.ar');  
+
+        // set baseURL 
+        const env = require('./config/' + browser.params.country + '/environments.json');
+        baseURL = eval("env." + browser.params.env + ".URL");
+        browser.get(baseURL);
+
         //Jasmine set initialization
         const environment = jasmine.getEnv();
 
         // Reports config
         // Turn Off default reporter
-       // jasmine.getEnv().clearReporters();
+        // jasmine.getEnv().clearReporters();
         // Set Terminal report
         jasmine.getEnv().addReporter(new terminalReporter({
             verbosity: 3,

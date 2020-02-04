@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
 	'Alojamientos': { order: 1, text: 'Alojamientos', url: 'https://www.despegar.com.ar/hoteles/', iconClassName: 'shifu-icon-product shifu-3-icon-hotels' },
 	'Vuelos': { order: 2, text: 'Vuelos', url: 'https://www.despegar.com.ar/vuelos/', iconClassName: 'shifu-icon-product shifu-3-icon-flights' },

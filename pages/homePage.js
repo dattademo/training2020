@@ -3,7 +3,6 @@ const basePage = require('./basePage')
 class homePage extends basePage {
 	constructor() {
 		super();
-
 		this.headerListProducts = element(by.className('header-list-products'));
 		this.headerElements = this.headerListProducts.all(by.className('header-product-item'));
 		this.defaultSearchBox = element(by.id('searchbox-sbox-box-packages'));

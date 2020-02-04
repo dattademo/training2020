@@ -1,6 +1,6 @@
 var using = require('jasmine-data-provider');
-var objectDataProvider = require('../../data/headerListProducts');
-var homePageData = require('../../data/homePageData.json');
+var objectDataProvider = require('../../data/' + browser.params.country + '/headerListProducts');
+var homePageData = require('../../data/' + browser.params.country + '/homePageData.json');
 var homePage = require('../../pages/homePage');
 
 describe("Homepage Test Suite", function () {

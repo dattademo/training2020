@@ -1,0 +1,14 @@
+{
+	"prod": {
+		"URL": "https://www.despegar.com.uy",
+		"timeout" : 20000
+	},
+	"uat": {
+		"URL": "https://uat.despegar.com.uy",
+		"timeout" : 40000
+	},
+	"test": {
+		"URL": "https://test.despegar.com.uy",
+		"timeout" : 30000
+	}
+}
