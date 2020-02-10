@@ -7,25 +7,23 @@ exports.config = {
     // this command starts a standalone server to avoid starting a dedicated server on an extra terminal
     directConnect: true,
     // run all the specs under Spec folder
-    specs: ['./specs/e2e/searchAndBuy.spec.js'],
-
-    jasmineNodeOpts: {
-        defaultTimeoutInterval: 60000
-    },
+    specs: ['./specs/e2e/shoppingFlow/searchAndBuy.spec.js'],
 
     // run specific spec files in order to set different strategies
     suites: {
-        homePageTest: './specs/homePage/homePage.spec.js',
-        homePageTestNoObject: './specs/homePage/homePageNoObject.spec.js',
-        functional: './specs/*/*.spec.js',
-        smokeTest: ['./specs/homePage/homePage.spec.js', './specs/homePage/homePageNoObject.spec.js']
+        homePageTest: './specs/e2e/homePage/homePage.spec.js',
+        shoppingFlowTests: './specs/e2e/shoppingFlow/*.spec.js',
+        searchAndBuyTest: './specs/e2e/shoppingFlow/searchAndBuy.spec.js',
+        functional: './specs/e2e/*/*.spec.js',
+        smokeTest: ['./specs/e2e/homePage/homePage.spec.js']
     },
 
     // env parameter will get the desired env URL from config-> environments.js
     //prod URL is set by default
     // test data Language will be spanish for default
     params: {
-        env: "prod"
+        env: "prod",
+        baseURL: "https://www.cervezasonline.com/carrito?step=1"
     },
 
     onPrepare: () => {
@@ -37,8 +35,7 @@ exports.config = {
 
         // set baseURL 
         const env = require('./config/environments.json');
-        baseURL = eval("env." + browser.params.env + ".URL");
-        browser.get(baseURL);
+        browser.params.baseURL = eval("env." + browser.params.env + ".URL");
 
         //Jasmine set initialization
         const environment = jasmine.getEnv();
@@ -90,7 +87,7 @@ exports.config = {
     onComplete: () => {
         browser.getCapabilities().then((caps) => {
             const testConfig = {
-                reportTitle: `Automation Framework`,
+                reportTitle: 'Automation Framework - Env: ' + browser.params.env,
                 outputPath: './reports',
                 screenshotPath: 'screenshots/',
                 testBrowser: caps.get('browserName'),

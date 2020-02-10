@@ -1,4 +1,4 @@
-const basePage = require('./basePage')
+const basePage = require('./basePage');
 
 class resultPage extends basePage {
 	constructor() {

@@ -1,4 +1,4 @@
-const basePage = require('./basePage')
+const basePage = require('./basePage');
 
 class authPage extends basePage {
 	constructor() {
@@ -16,6 +16,7 @@ class authPage extends basePage {
 		this.city = this.element(this.by.id("city"));
 		this.state = this.element(this.by.id("id_state"));
 		this.phone = this.element(this.by.id("phone_mobile"));
+		this.submitGuestButton = this.element(this.by.id("submitGuestAccount"));
 	}
 
 	fillFormComplete(data) {

@@ -8,5 +8,4 @@ module.exports = {
 	'Selecciones': { order: 8, text: 'Selecciones', url: 'https://www.cervezasonline.com/379-selecciones'},
 	'Beer Blog': { order: 9, text: 'Beer Blog', url: 'http://blog.bierwinkel.es/'},
 	'Profesionales': { order: 10, text: 'Profesionales', url: 'http://www.mercabeer.es/'},
-	
 }
