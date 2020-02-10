@@ -7,7 +7,11 @@ exports.config = {
     // this command starts a standalone server to avoid starting a dedicated server on an extra terminal
     directConnect: true,
     // run all the specs under Spec folder
-    specs: ['./specs/homePage/homePage.spec.js'],
+    specs: ['./specs/e2e/searchAndBuy.spec.js'],
+
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 60000
+    },
 
     // run specific spec files in order to set different strategies
     suites: {
@@ -21,8 +25,7 @@ exports.config = {
     //prod URL is set by default
     // test data Language will be spanish for default
     params: {
-        env: "prod",
-        country: "ar"
+        env: "prod"
     },
 
     onPrepare: () => {
@@ -33,7 +36,7 @@ exports.config = {
         browser.driver.manage().window().maximize();
 
         // set baseURL 
-        const env = require('./config/' + browser.params.country + '/environments.json');
+        const env = require('./config/environments.json');
         baseURL = eval("env." + browser.params.env + ".URL");
         browser.get(baseURL);
 

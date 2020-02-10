@@ -1,0 +1,14 @@
+{
+	"prod": {
+		"URL": "https://www.cervezasonline.com/?dontshowhmw=yes",
+		"timeout" : 20000
+	},
+	"uat": {
+		"URL": "https://uat.cervezasonline.com/",
+		"timeout" : 40000
+	},
+	"test": {
+		"URL": "https://test.cervezasonline.com/",
+		"timeout" : 30000
+	}
+}

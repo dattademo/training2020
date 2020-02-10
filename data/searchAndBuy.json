@@ -1,0 +1,11 @@
+{
+    "beer": {
+        "textToSearch": "delirium",
+        "sortCondition": "En inventario primero",
+        "itemNumber": 0,
+        "quantity": 1,
+        "timeout": 20000
+        
+    }
+    
+}

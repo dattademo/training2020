@@ -1,0 +1,14 @@
+{
+    "guestEmail": "test@test.com",
+    "firstName": "TestName",
+    "lastName": "TestSurname",
+    "birthDay": "28",
+    "birthMonth": "Marzo",
+    "birthYear": "1986",
+    "dni": "35456789",
+    "address": "Calle Test, 123",
+    "postalCode": "00000",
+    "city": "Badalona",
+    "state": "Barcelona",
+    "phone": "523698574888"
+}

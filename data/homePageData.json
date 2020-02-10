@@ -1,0 +1,15 @@
+{
+    "logo": {
+        "height": "123",
+        "width": "200",
+        "altText": "cervezasonline.com"
+    },
+    "searchbox": {
+        "placeholderText": "Buscar"
+    },
+    "cartButton": {
+        "url": "https://www.cervezasonline.com/carrito",
+        "title": "Ver mi carrito de compra",
+        "text": "Carrito"
+    }
+}
