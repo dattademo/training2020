@@ -65,7 +65,8 @@ exports.config = {
                             var screenshotPath = "./reports/screenshots/";
 
                             if (!fs.existsSync(screenshotPath)) {
-                                fs.mkdirSync(screenshotPath);
+                                fs.mkdirSync("reports");
+                                fs.mkdirSync("reports/screenshots");
                             }
                             var pgnFileName = (screenshotPath + browserName + '-' + result.fullName + '.png');
                             browser.takeScreenshot().then(function (png) {
