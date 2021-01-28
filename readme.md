@@ -1,4 +1,4 @@
-# Trainin 2020 Project
+# Training 2020 Project
 
 Tech Stack:
   - Javascript
