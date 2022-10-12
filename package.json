@@ -19,7 +19,7 @@
   "dependencies": {
     "jasmine": "^3.5.0",
     "jasmine-data-provider": "^2.2.0",
-    "jasmine-reporters": "^2.3.2",
+    "jasmine-reporters": "^2.5.0",
     "protractor-html-reporter": "^1.3.2"
   },
   "devDependencies": {}
